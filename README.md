@@ -94,21 +94,21 @@
 
 1. 이미지 내부 파일 시스템 구조 보기 : docker run (이미지 이름) ls
 
-   - 이미지에 ls라는 명령어를 실행할 수 있는 명령어를 실행할 수 있는 파일이 있어야 ls를 싫행할 수 있다.
+   - 이미지에 ls라는 명령어를 실행할 수 있는 명령어를 실행할 수 있는 파일이 있어야 ls를 실행할 수 있다.
    - (현재 ls 명령어가 있는 위치에 다른 명령어를 작성하게 될 경우 시작 명령어를 무시하고 해당 위치에 있는 명령어를 실행하게 된다.)
 
 2. 현재 실행 중인 컨테이너들 나열하기 : docker ps
 
-- ps : process status
-- containerID
-- Image
-- commmand : 컨테이너가 시작될 때 어떠한 커맨드로 시작되었는지 알려준다
-- created : 컨테이너 상태 (up: 실행 중, exited: 종료, pause: 일시정지)
-- ports: 컨테이너가 개방한 포트, 호슽에 연결한 포트
-- names: 커테이너의 고유한 이름
+   - ps : process status
+   - containerID
+   - Image
+   - commmand : 컨테이너가 시작될 때 어떠한 커맨드로 시작되었는지 알려준다
+   - created : 컨테이너 상태 (up: 실행 중, exited: 종료, pause: 일시정지)
+   - ports: 컨테이너가 개방한 포트, 호슽에 연결한 포트
+   - names: 커테이너의 고유한 이름
 
 3. 원하는 항목만 보기
 
-- ex) docker ps --format 'table{{.Names}} \t table{{.Images}}'
+   - ex) docker ps --format 'table{{.Names}} \t table{{.Images}}'
 
 4. 모든 컨테이너 나열 : docker ps -a

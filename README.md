@@ -112,3 +112,12 @@
    - ex) docker ps --format 'table{{.Names}} \t table{{.Images}}'
 
 4. 모든 컨테이너 나열 : docker ps -a
+
+5. 도커 컨테이너의 생명주기
+
+   - 생성 : docker create <이미지 이름>
+   - 시작 : docker start <시작할 컨테이너 아이디/이름>
+   - docker start -a <컨테이너 아이디 일부> : -a는 attacth라는 옵션이다. 도커 컨테이너가 실해될 때 아웃풀들을 화면에 표출하는 옵션이다.
+   - 생성 + 시작 : docker run <이미지 이름>
+   - 중지 : docker stop <중지할 컨이너 아이디/이름>
+   - 삭제 : docker rm <삭제할 컨테이너 아이디/이름>

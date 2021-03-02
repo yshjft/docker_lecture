@@ -121,4 +121,42 @@
    - 생성 + 시작 : docker run <이미지 이름>
    - 중지 : docker stop <중지할 컨이너 아이디/이름>
    - 삭제 : docker rm <삭제할 컨테이너 아이디/이름>
+    
+6. docker stop VS docker kill
+    
+   - docker stop <중지할 컨테이너 아이디/이름> : 하던 작업을 마저하고 중지 (grace period를 가진다)
+   - docker kill <<중지할 컨테이너 아이디/이름> : 바로 컨테이너를 중지한다
+    
+    
+7. 도커 컨테이너 삭제하기
+    
+   - 중지된 컨테이너 삭제 : docker rm <아이디/이름>
+   - 모든 컨테이너 삭제 : docker rm '`docker ps -a -q`'
+   - 이미지 삭제 : docker rmi <이미지 id>
+   - 한번에 사용하지 않는 컨테이너, 이미지, 네트워크 모두 삭제 : docker system prune
+    
+    
+8. 실행 중인 컨테이너에 명령어 전달
+    
+    - 실행 중인 컨테이너에 명령어를 전달하는 방법 : docker exec <컨테이너 아이디> <명령어>
+    - docker run VS docker exec       
+      docker run : 새로 컨테이너를 만들어설 실행        
+      docker exec : 이미 실행 중인 컨테이너에 명령어를 전달
+    - 명령어 실행한 후 계속 명령어를 적는 방법         
+      docker exec -it <컨테이너 아이디> <명령어>
+      
+9. 실행 중인 컨테이너에서 터미널 생활 즐기기
+
+    - 실행 중인 컨테이너에 쉘 환경으로 접속하기 : docker exec -it <컨테이너 아이디> sh OR docker run -it <이미지 이름> sh
+    - 쉘 환경에서 나올 때는 CTRL+D로 나올 수 있다.
+    
+10. 도커 이미지 생성하는 순서
+
+    - 이미지를 통해서 컨테이너 생성        
+      이미지 : 설정 & 종속성을 가지고 있는 소프트웨어 패키지
+                
+    - Dockerfile 작성 -> 도커 클라이언트 -> 도커 서버 -> 이미지 생성
+      Dockerfile : 도커 이미지를 만들기 위한 설정 파일, 컨테이너가 어떻게 행동할지 정의 해놓았다.
+      
+      
 

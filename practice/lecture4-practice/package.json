@@ -1,0 +1,19 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "4강 도커 강의 실습",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "hys",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "node.js on docker"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

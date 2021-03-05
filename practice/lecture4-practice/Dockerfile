@@ -7,6 +7,8 @@ FROM node:10
 # COPY <복사 할 파일 경로> <컨테이너내에서 파일이 보사될 경로>
 # COPY package*.json ./
 
+WORKDIR  /usr/src/app
+
 COPY ./ ./
 
 # npm은 Node.js로 만들어진 모듈을 웹에서 받아서 설치하고 관리해주는 프로그램이다

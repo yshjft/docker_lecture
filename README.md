@@ -183,3 +183,14 @@
     
     - 일반적인 도커 컨테이너 생성 + 실행 : docker run <이미지아이디>
     - 로컬 네트워크와 도커 컨테이너 내부 네트워크 연결 : docker run -p <로컬네트워크 포트>:<컨테이너 내부 포트> <이미지 이름>
+    
+15. WORKING DIRECTORY 명시해주기
+
+    - WORKIDR <디렉토리 이름> : 이미지 안에서 어플리케이션 코드를 가지고 있을 디렉토리를 생성하는 것이다.
+    - ex) WORKIDR /usr/src/app : /usr/src/app 이라는 디렉토리가 워킹 디렉토리가 된다
+    - WORKING DIRECTORY 를 명시해주는 이유      
+      카피한 파일들의 이름이 원래 이미지에 있던 파일과 이름이 같다면 기존 파일은 사라지는 문제가 발생하게 된다.            
+      한 디렉토리에 모든 것이 다 들어가 복잡하게 된다.
+    - WORKING DIRECTORY 명시 이후 ls명령어 사용하면 root 디렉토리가 아닌 WORKING DIRECTORY 부터 보여준다.  
+      
+    

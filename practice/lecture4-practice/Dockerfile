@@ -9,9 +9,11 @@ FROM node:10
 
 WORKDIR  /usr/src/app
 
-COPY ./ ./
+COPY package.json ./
 
 # npm은 Node.js로 만들어진 모듈을 웹에서 받아서 설치하고 관리해주는 프로그램이다
 RUN npm install
+
+COPY ./ ./
 
 CMD ["node", "server.js"]

@@ -7,7 +7,7 @@ FROM node:10
 # COPY <복사 할 파일 경로> <컨테이너내에서 파일이 보사될 경로>
 # COPY package*.json ./
 
-WORKDIR  /usr/src/app
+WORKDIR /usr/src/app
 
 COPY package.json ./
 

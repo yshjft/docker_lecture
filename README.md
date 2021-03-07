@@ -192,5 +192,28 @@
       카피한 파일들의 이름이 원래 이미지에 있던 파일과 이름이 같다면 기존 파일은 사라지는 문제가 발생하게 된다.            
       한 디렉토리에 모든 것이 다 들어가 복잡하게 된다.
     - WORKING DIRECTORY 명시 이후 ls명령어 사용하면 root 디렉토리가 아닌 WORKING DIRECTORY 부터 보여준다.  
-      
     
+16. 볼륨 사용하기 *****
+    
+    - 이유는 모르겠지만 파일의 변경된 내용이 반영되지 않는다. 문제는 이유를 모르겠다는 것이다. 개빡치네..... 
+    
+17. Docker compose (with redis)
+
+    - Docker compose란 : 다중 컨테이너 도커 어플리케이션을 정의하고 실행하기 우한 도구
+    - Redis (Remote Dictionary Server)         
+      메모리 기반 키-값 구조 데이터 관리 시스템            
+      모든 데이터를 메모리에 저장하기에 빠르게 조회가능하다(메모리에 저장함에도 영속적으로 저장 가능하다, 서버를 재부팅해도 데이터 유지 가능하다)       
+      비관계형 데이터베이스다      
+    - Node.js 환경에서 Redis 사용 방법       
+      First. redis-server 작동        
+      Second. redis 모듈 다운         
+      Third. redis.createClient로 레디스 클라이언트 생성        
+      (redis 서버가 작동하는 곳과 Node.js 앱이 작동하는 곳이 다른 곳이라면 host인자와 port 인자를 명시해주어야 한다.)
+    - 레디스 클라이언트가 실행되기 위해서는 레디스 서버가 실행되어야 한다. (레디스 서버 실행 : docker run redis)
+      
+18. Docker Containers간 통신할 때 나타나는 에러
+
+    - 컨테이너 간 통신을 할 때 따로 설정이 없으면 컨테이너 간의 접근이 가능하지 않다.
+    - 이를 해결하기 위해 docker compose를 사용한다.
+      
+      

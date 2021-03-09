@@ -235,3 +235,8 @@
     - docker-compose down : 실행된 컨테이널들 종료시킨다.
       
       
+20. 도커를 이용한 리액트 실행
+    
+    - 개발 환경에서 도커 실행 시 도커파일을 Dockerfile.dev로 작성한다
+    - Dockerfile.dev로 이미지 만들 경우 : docker build -f Dockerfile.dev ./
+    - 생성된 도커 이미지로 리액트 실행할 경우 : docker run -it -p 3000:3000 <이미지 이름>

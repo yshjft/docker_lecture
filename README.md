@@ -231,7 +231,7 @@
     
     - docker-compose up : 이미지가 존재하지 않을 경우에만 빌드하며, 컨테이너를 시작한다.
     - docker-compose up --build : 필요하지 않아도 모든 이미지를 빌드하고 컨테이너를 시작한다. 소스가 수정될 경우 사용한다.
-    - docker-compose -d up : 앱을 백그라운드에서 실행한다. 앱에서 나오는 output을 표출하지 않는다.
+    - docker-compose up -d: 앱을 백그라운드에서 실행한다. 앱에서 나오는 output을 표출하지 않는다.
     - docker-compose down : 실행된 컨테이널들 종료시킨다.
       
       
@@ -240,3 +240,4 @@
     - 개발 환경에서 도커 실행 시 도커파일을 Dockerfile.dev로 작성한다
     - Dockerfile.dev로 이미지 만들 경우 : docker build -f Dockerfile.dev ./
     - 생성된 도커 이미지로 리액트 실행할 경우 : docker run -it -p 3000:3000 <이미지 이름>
+    - 이번에는 볼륨을 사용하는 것에 성공했다. 도커 볼륨 이용시 fish shell을 쓰지 말아야겠다. fish shell을 쓰면 pwd 명령어가 제대로 작동하지 않는것 같다.

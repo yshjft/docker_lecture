@@ -241,3 +241,7 @@
     - Dockerfile.dev로 이미지 만들 경우 : docker build -f Dockerfile.dev ./
     - 생성된 도커 이미지로 리액트 실행할 경우 : docker run -it -p 3000:3000 <이미지 이름>
     - 이번에는 볼륨을 사용하는 것에 성공했다. 도커 볼륨 이용시 fish shell을 쓰지 말아야겠다. fish shell을 쓰면 pwd 명령어가 제대로 작동하지 않는것 같다.
+    
+21. 기타
+    
+    - 8강과 9강은 실습 위주이고 AWS elastic beanstalk이라는 것을 사용합니다. 현재 8강까지는 모든 실습을 끝냈지만 9강 부터는 알고 있거나 아직 쓰지 않을 내용이기에 나중에 다시 볼거 같습니다.
